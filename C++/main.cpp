@@ -158,7 +158,10 @@ int main(){
 }
 */
 
-int compare(string s, string str){
+/*
+ --->  Write a C++ program to compare two given strings and return the number of the positions where they contain the same length 2 substring
+ <----
+ int compare(string s, string str){
     int ctr = 0;
     for (int i = 0 ; i < s.length()-1 ; i++){
         for (int j = 0; j< str.length()-1 ; j ++){
@@ -173,5 +176,118 @@ int compare(string s, string str){
 }
 int main(){
     cout << compare("abcdefgh", "abijsklm") << endl;
-}
+}*/
 
+/* ----> Create a new string from a given string where a specified character have been removed except starting and ending position of the given string.*/
+
+/*string test(string myString, string s){
+    for (int i= myString.length()-2; i > 0 ; i--){
+        if (myString[i] == s[0]){
+            myString = myString.erase(i,1);
+        }
+    }
+    return myString;
+}
+int main(){
+    
+     cout << test("xxHxix", "x") << endl;
+     cout << test("abxdddca", "a") << endl;
+     cout << test("xabjbhtrb", "b") << endl;
+    
+    
+}
+*/
+/* --> . Write a C++ program to count the number of two 5's are next to each other in an array of integers. Also count the situation where the second 5 is actually a 6.*/
+/*bool test(int numbers[] ){
+    int ctr = 0;
+    int sizenumbers =sizeof(numbers)/sizeof(numbers[0]);
+    for (int i = 0; i <  sizenumbers; i++){
+        if ((numbers[i] == 5 && numbers[i+1] == 5) ||( numbers[i] == 5 && numbers[i+1] == 6 )){
+            ctr ++;
+          
+        }
+
+    }
+    return ctr;
+}
+int main (){
+    int nums1[] = {5, 5, 2};
+    cout << sizeof(nums1)/sizeof(nums1[0]) << endl;;
+    cout << test(nums1);
+}*/
+
+/* -> structs*/
+/*struct student {
+    int age;
+    string firstname;
+    string lastname;
+    
+};
+int main(){
+    student st;
+    st.age = 12;
+    st.firstname = "Havva Fatma";
+    st.lastname = "Özbay";
+    
+    cout << st.age << endl;
+    cout << st.firstname << endl;
+    cout << st.lastname<<endl;
+}*/
+
+/*---> Class ----->*/
+
+class Student{
+private:
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+public:
+    void setAge(int Age){
+        age = Age;
+    }
+    void setFirstName(string fn){
+        first_name = fn;
+    }
+    void setLastName(string ln){
+        last_name = ln;
+    }
+    void setStandart(int s){
+        standard = s;
+    }
+    
+    int getAge(){
+        return age;
+    }
+    string getFirstName(){
+        return first_name;
+    }
+    string getLastName(){
+        return last_name;
+    }
+    int getStandard(){
+        return standard;
+    }
+    
+
+};
+int main (){
+    int age, standard;
+    string first_name , last_name;
+    
+    cin >> age >> first_name >> last_name >> standard;
+    
+    Student st;
+    
+    st.setAge(age);
+    st.setFirstName(first_name);
+    st.setLastName(last_name);
+    st.setStandart(standard);
+    
+    cout << st.getAge() << endl;
+    cout << st.getFirstName()<< endl;
+    cout << st.getLastName() << endl;
+    cout << st.getStandard() << endl;
+
+    
+}
