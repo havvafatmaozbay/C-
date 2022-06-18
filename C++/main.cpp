@@ -236,7 +236,7 @@ int main(){
 
 /*---> Class ----->*/
 
-class Student{
+/*class Student{
 private:
     int age;
     string first_name;
@@ -290,4 +290,20 @@ int main (){
     cout << st.getStandard() << endl;
 
     
-}
+}*/
+
+/*int main(){
+    int arr[5]={1,2,3,4,5};
+    int i;
+    int result=0;
+    int avarage = 0;
+    for (i=0; i< 5; i++){
+        result +=  arr[i];
+        
+    }
+    avarage = result/5;
+    
+    cout << avarage;
+}*/
+
+
